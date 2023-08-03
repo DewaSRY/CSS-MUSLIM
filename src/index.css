@@ -1,3 +1,4 @@
+/* Reset  */
 *,
 *::before,
 *::after {
@@ -6,31 +7,69 @@
   box-sizing: border-box;
 }
 
-/******************************************** Utility Components ***************************************/
+/*********************************************** Utility Components  *************************************************/
 :root {
-  font-size: 10px;
-  /************ Custom Properties ***********/
-  --primary-color: #014d4e;
-  --secondary-color: #ff9408;
-  --secondary-color-m: #ff94088e;
-  --tertiary-color: #017374;
-  --tertiary-color-m: #01727498;
-}#root {
-  font-family: "Baloo Tamma 2", cursive;
-  line-height: 1.8;
-  display: flex;
-  justify-content: row;
-}
-li {
-  list-style: none;
+  font-size: 62.5%;
+
+  /***************** Custom Properties *****************/
+
+  /* Colors */
+  --color-primary: #730039;
+  --color-primary-m-light: hsla(330, 100%, 23%, 0.55);
+  --color-primary-m-dark: hsla(330, 100%, 23%, 0.85);
+
+  --color-secondary: #ffc513;
+  --color-secondary-m-light: hsla(45, 100%, 54%, 0.55);
+  --color-secondary-m-dark: rgba(255, 196, 19, 0.85);
+
+  --color-tertiary: #ff724c;
+  --color-tertiary-m-light: hsla(13, 100%, 65%, 0.55);
+  --color-tertiary-m-dark: rgba(255, 115, 76, 0.85);
+
+  --color-quaternary: #f6eedf;
+  --color-quaternary-m-light: hsla(39, 56%, 92%, 0.55);
+  --color-quaternary-m-dark: hsla(39, 56%, 92%, 0.85);
+
+  /* Transtion Duration */
+  --transition-duration: 0.3s;
+
+  /* Section Title Font Size */
+  --font-size-title: calc(2rem + 2vw);
+
+  /* Section Padding */
+  --padding-section: 8vh 3vw;
 }
 
+
+
+/* Anchor tags */
 a:link,
 a:visited {
+  color: var(--color-quaternary);
   text-decoration: none;
-  color: white;
-  font-size: 1.5rem;
+  font-size: calc(0.5rem + 1vw);
+  padding: 1rem 2rem;
+  border-radius: 0.3rem;
+  position: relative;
+  transition: all var(--transition-duration) cubic-bezier(1, 0, 0, 1);
+  z-index: 1;
 }
-main {
-  flex: 1;
+
+/* Paragraphs */
+p {
+  color: white;
+  font-size: calc(1rem + 1vw);
+  font-weight: 200;
+}
+
+/* List Items */
+li {
+  list-style: none;
+  margin-bottom: 4rem;
+}
+
+/* Icons */
+svg {
+  font-size: var(--font-size-title);
+  color: var(--color-secondary);
 }
