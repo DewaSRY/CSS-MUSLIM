@@ -1,0 +1,36 @@
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/******************************************** Utility Components ***************************************/
+:root {
+  font-size: 10px;
+  /************ Custom Properties ***********/
+  --primary-color: #014d4e;
+  --secondary-color: #ff9408;
+  --secondary-color-m: #ff94088e;
+  --tertiary-color: #017374;
+  --tertiary-color-m: #01727498;
+}#root {
+  font-family: "Baloo Tamma 2", cursive;
+  line-height: 1.8;
+  display: flex;
+  justify-content: row;
+}
+li {
+  list-style: none;
+}
+
+a:link,
+a:visited {
+  text-decoration: none;
+  color: white;
+  font-size: 1.5rem;
+}
+main {
+  flex: 1;
+}
