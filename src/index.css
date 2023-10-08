@@ -1,0 +1,24 @@
+:root {
+  box-sizing: border-box;
+
+  font-size: 62.5%;
+  /************ Custom Properties ***********/
+  /* Main Color */
+  --primary-color: #014d4e;
+
+  /* Secondary Color */
+  --secondary-color: #ff9408;
+
+  /* Secondary Color Modified */
+  --secondary-color-m: #ff94088e;
+
+  /* tertiary color */
+  --tertiary-color: #017374;
+
+  /* tertiary color modified */
+  --tertiary-color-m: #01727498;
+}
+* {
+  margin: 0;
+  padding: 0;
+}

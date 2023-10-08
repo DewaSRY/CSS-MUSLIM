@@ -1,0 +1,210 @@
+.container {
+    position: relative;
+    margin: 0;
+    padding: 0;
+    width: 100%;
+    font-family: "Baloo Tamma 2", cursive;
+    line-height: 1.8;
+    display: flex;
+    /* List Items */
+    li {
+        list-style: none;
+    }
+    /* Abchor Tags */
+    a:link,
+    a:visited {
+        text-decoration: none;
+        color: white;
+        font-size: 1.5rem;
+    }
+}
+//*-*-*-*-*-*-*-*-*-*-- The 1300px Mark Break Point*-*-*-*-*-*-*-*-*-*-*
+@mixin media-desktop {
+    @media screen and (min-width: 1300px) {
+        @content;
+    }
+}
+
+//*-*-*-*-*-*-*-*-*-*-- The 800px Mark Break Point*-*-*-*-*-*-*-*-*-*-*
+@mixin media-tablet {
+    @media screen and (min-width: 800px) {
+        @content;
+    }
+}
+
+//*-*-*-*-*-*-*-*-*-*-- The 600px Mark Break Point*-*-*-*-*-*-*-*-*-*-*
+@mixin media-medium {
+    @media screen and (min-width: 600px) {
+        @content;
+    }
+}
+
+//*-*-*-*-*-*-*-*-*-*-- The 400px Mark Break Point*-*-*-*-*-*-*-*-*-*-*
+@mixin media-small {
+    @media screen and (min-width: 400px) {
+        @content;
+    }
+}
+
+/*-*-*-*-**-*-*-*-**-*-*-*-**-*-*-*-* (max-width:1510px) Mark *-*-*-*-**-*-*-*-**-*-*-*-**-*-*-*-*/
+@media screen and (min-width: 1510px) {
+    body {
+        width: 1510px;
+        margin: 0 auto;
+    }
+}
+@media screen and (max-width: 900px) {
+    /*-*-*-*-**-*-*-*-**-*-*-*-**-*-*-*-* Showcase / Hero Section *-*-*-*-**-*-*-*-**-*-*-*-**-*-*-*-*/
+    section#showcase {
+        background-position: 100%;
+        align-items: flex-end;
+    }
+}
+/*-*-*-*-**-*-*-*-**-*-*-*-**-*-*-*-* (max-width:610px) Mark *-*-*-*-**-*-*-*-**-*-*-*-**-*-*-*-*/
+@media screen and (max-width: 610px) {
+    /*-*-*-*-**-*-*-*-**-*-*-*-**-*-*-*-* Main Nav Header *-*-*-*-**-*-*-*-**-*-*-*-**-*/
+    header {
+        position: absolute;
+        nav {
+            width: 30rem;
+            height: 100%;
+            position: fixed;
+            top: 0;
+            right: -30rem;
+            background-color: var(--secondary-color);
+            text-align: center;
+            ul {
+                flex-direction: column;
+                justify-content: center;
+                align-items: flex-start;
+                li {
+                    margin-bottom: 4vh;
+                    margin-left: 6vw;
+                    opacity: 0;
+                    &:nth-child(1) {
+                        transition: all 0.5s ease-in-out 0.2s;
+                    }
+                    &:nth-child(2) {
+                        transition: all 0.5s ease-in-out 0.4s;
+                    }
+                    &:nth-child(3) {
+                        transition: all 0.5s ease-in-out 0.6s;
+                    }
+                    &:nth-child(4) {
+                        transition: all 0.5s ease-in-out 0.8s;
+                    }
+                    &:nth-child(5) {
+                        transition: all 0.5s ease-in-out 1s;
+                    }
+                    &:nth-child(6) {
+                        transition: all 0.5s ease-in-out 1.2s;
+                    }
+                    .fade {
+                        opacity: 1;
+                    }
+                }
+            }
+        }
+    }
+    .clicked {
+        left: 55%;
+        & > div {
+            &:first-child {
+                transform: rotateZ(-405deg) translate(-0.8rem, 0.6rem);
+            }
+            &:nth-child(2) {
+                opacity: 0;
+            }
+            &:nth-child(3) {
+                transform: rotateZ(405deg) translate(-0.8rem, -0.6rem);
+            }
+        }
+    }
+    .hamburger {
+        width: 5rem;
+        height: 5rem;
+        position: fixed;
+        top: 2rem;
+        right: 3rem;
+        cursor: pointer;
+        background-color: var(--secondary-color);
+        padding: 1rem;
+        border-radius: 50%;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-around;
+        & div {
+            width: 100%;
+            height: 0.3rem;
+            background-color: white;
+            border-radius: 0.2rem;
+            transition: all 0.4s ease-in-out;
+        }
+    }
+
+    /*-*-*-*-**-*-*-*-**-*-*-*-**-*-*-*-* Showcase / Hero Section *-*-*-*-**-*-*-*-**-*-*-*-**-*-*-*-*/
+    .showcase {
+        background-position: 80%;
+    }
+
+    /*-*-*-*-**-*-*-*-**-*-*-*-**-*-*-*-* Services Section *-*-*-*-**-*-*-*-**-*-*-*-**-*-*-*-*/
+    /*-*-*-*-**-*-*-*-**-*-*-*-**-*-*-*-* Skills Section *-*-*-*-**-*-*-*-**-*-*-*-**-*-*-*-*/
+    /*-*-*-*-**-*-*-*-**-*-*-*-**-*-*-*-* Testimonials Section *-*-*-*-**-*-*-*-**-*-*-*-**-*-*-*-*/
+    .serviceSection {
+        padding: 6rem 3rem 2rem;
+        padding: calc(1rem + 2vw);
+        margin: 0 0 calc(1rem + 2vw);
+    }
+
+    .service {
+        padding: calc(1rem + 2vw);
+        margin: 0 0 calc(1rem + 2vw);
+    }
+    h3,
+    p {
+        font-size: calc(1.2rem + 2vw);
+    }
+    h4 {
+        font-size: calc(0.8rem + 1.5vw);
+    }
+}
+
+/*-*-*-*-**-*-*-*-**-*-*-*-**-*-*-*-* (max-width:460px) Mark *-*-*-*-**-*-*-*-**-*-*-*-**-*-*-*-*/
+@media screen and (max-width: 460px) {
+    /*-*-*-*-**-*-*-*-**-*-*-*-**-*-*-*-* Testimonials Section *-*-*-*-**-*-*-*-**-*-*-*-**-*-*-*-*/
+    .testimonials div {
+        .cardContent {
+            top: 0;
+            height: 100%;
+            width: 100%;
+            /* transform: scaleY(0); */
+            transform-origin: bottom;
+            display: flex;
+            flex-direction: column;
+            justify-content: flex-start;
+            h3,
+            p {
+                font-size: calc(1.2rem + 2vw);
+            }
+        }
+        &:hover .cardContent,
+        &:active .cardContent {
+            transform-origin: top;
+        }
+    }
+
+    /*-*-*-*-**-*-*-*-**-*-*-*-**-*-*-*-* Contact Section *-*-*-*-**-*-*-*-**-*-*-*-**-*-*-*-*/
+    .contact {
+        background-position: 15% 5%;
+    }
+}
+
+@import "./AboutMe.scss";
+@import "./HeroShowcase.scss";
+@import "./SocialBar.scss";
+@import "./Navigation.scss";
+@import "./SkillsProgress.scss";
+@import "./Testimonials.scss";
+@import "./WorkSection.scss";
+@import "./ServiceSection.scss";
+@import "./ContactSection.scss";

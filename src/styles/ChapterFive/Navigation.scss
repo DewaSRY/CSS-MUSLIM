@@ -1,0 +1,52 @@
+.navigation {
+    background-color: var(--secondary-color);
+    height: calc(3vw + 3vh);
+    width: calc(97vw - 3vh);
+    z-index: 2;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    & > nav > ul {
+        display: flex;
+        width: 100%;
+        align-items: center;
+        & > li {
+            padding-right: 3vw;
+            & > a {
+                font-size: calc(1rem + 0.7vw) !important;
+                padding: 0.2rem 0.6rem;
+                position: relative;
+                &:link::before,
+                &:visited::before,
+                &:link::after,
+                &:visited::after {
+                    position: absolute;
+                    content: "";
+                    left: 0;
+                    width: 100%;
+                    height: 0.25rem;
+                    background-color: white;
+                    transform: scaleX(0);
+                    transition: transform 0.6s cubic-bezier(1, 0, 0, 1);
+                }
+                &:hover::before,
+                &:active::before,
+                &:hover::after,
+                &:active::after {
+                    transform: scaleX(1);
+                }
+                &:link::before,
+                &:visited::before {
+                    top: 0;
+                    /* Transform origin is center by default */
+                    transform-origin: left;
+                }
+                &:link::after,
+                &:visited::after {
+                    bottom: 0;
+                    transform-origin: right;
+                }
+            }
+        }
+    }
+}

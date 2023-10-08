@@ -1,0 +1,33 @@
+.contact {
+    height: 100vh;
+    background-image: url("/src/assets/img/full-bg-03.jpg");
+
+    display: flex;
+    justify-content: flex-end;
+    align-items: flex-end;
+    form {
+        flex-basis: 40rem;
+
+        display: flex;
+        flex-direction: column;
+        background-color: var(--tertiary-color-m);
+        input,
+        textarea {
+            color: white;
+            font-family: "Indie Flower", cursive;
+            font-size: 1.5rem;
+            letter-spacing: 0.2rem;
+            padding: 2rem;
+            background: transparent;
+            border: none;
+            border-bottom: var(--secondary-color) solid 0.1rem;
+        }
+        textarea {
+            height: 30vh;
+        }
+        input[type="submit"] {
+            border: none;
+            cursor: pointer;
+        }
+    }
+}
