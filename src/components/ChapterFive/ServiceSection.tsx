@@ -1,5 +1,5 @@
 import { FC } from "react";
-import style from "@styles/ChapterFive/index.module.scss";
+import "@styles/ChapterFive/ServiceSection.css";
 import {
   FaQuidditch,
   FaMobileAlt,
@@ -36,12 +36,17 @@ const ServiceSection: FC = () => {
     },
   ];
   return (
-    <section className={style.serviceSection}>
+    <section className="flex flex-wrap bg-five-tertiary text-white py-12  items-center ">
       {services.map((service) => (
-        <div key={Math.random() * 10000}>
-          {service.icon}
-          <h3>{service.title}</h3>
-          <p className="services--para services__service-2--para">
+        <div
+          key={Math.random() * 10000}
+          className="basis-[60rem] bg-five-secondary border-five-secondary border-2 border-t-0 mt-12 mx-auto py-12 px-8 service-window"
+        >
+          <h3 className=" flex justify-between text-black text-3xl mb-8  md:text-6xl">
+            {service.title}
+            <span className="inline text-white">{service.icon}</span>
+          </h3>
+          <p className="text-2xl md:text-4xl">
             Lorem ipsum dolor sit amet consectetur adipisicing elit. Itaque
             nisi, atque deserunt iste ipsa odit!
           </p>

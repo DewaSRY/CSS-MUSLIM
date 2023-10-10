@@ -1,0 +1,121 @@
+a.showcase {
+  padding: 1rem;
+  position: relative;
+  z-index: 1;
+  transition: all 0.5s ease-in-out;
+  overflow: hidden;
+}
+a.showcase::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 100%;
+  background-color: #014d4e;
+  transform: scaleX(0);
+  transform-origin: right;
+  transition: transform 0.45s cubic-bezier(0.645, 0.045, 0.355, 1);
+  z-index: -1;
+}
+a.showcase:hover::before,
+a.showcase:active::before {
+  transform: scaleX(1);
+  transform-origin: left;
+}
+.hamburger {
+  width: 5rem;
+  height: 5rem;
+  position: fixed;
+  top: 2rem;
+  right: 3rem;
+  cursor: pointer;
+  background-color: #ff9408;
+  padding: 1rem;
+  border-radius: 50%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+}
+.hamburger > div {
+  width: 100%;
+  height: 0.3rem;
+  background-color: white;
+  border-radius: 0.2rem;
+  transition: all 0.4s ease-in-out;
+}
+.clicked {
+  right: 0 !important;
+  width: 100vw !important;
+}
+.clicked > nav > .hamburger > .line-1 {
+  transform: rotateZ(-405deg) translate(-0.8rem, 0.6rem);
+}
+.clicked > nav > .hamburger > .line-2 {
+  opacity: 0;
+}
+.clicked > nav > .hamburger > .line-3 {
+  transform: rotateZ(405deg) translate(-0.8rem, -0.6rem);
+}
+.clicked > nav > ul {
+  flex-direction: column;
+  justify-content: space-evenly;
+}
+.fade {
+  opacity: 1;
+}
+.fade-effect > li:nth-child(1) {
+  transition: all 0.5s ease-in-out 0.2s;
+}
+.fade-effect > li:nth-child(2) {
+  transition: all 0.5s ease-in-out 0.4s;
+}
+.fade-effect > li:nth-child(3) {
+  transition: all 0.5s ease-in-out 0.6s;
+}
+.fade-effect > li:nth-child(4) {
+  transition: all 0.5s ease-in-out 0.8s;
+}
+.fade-effect > li:nth-child(5) {
+  transition: all 0.5s ease-in-out 1s;
+}
+.fade-effect > li:nth-child(6) {
+  transition: all 0.5s ease-in-out 1.2s;
+}
+.fade-effect > li.fade {
+  opacity: 1;
+}
+
+.anchor-effect {
+  position: relative;
+}
+.anchor-effect:link::before,
+.anchor-effect:visited::before,
+.anchor-effect:link::after,
+.anchor-effect:visited::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  width: 100%;
+  height: 0.25rem;
+  background-color: white;
+  transform: scaleX(0);
+  transition: transform 0.6s cubic-bezier(1, 0, 0, 1);
+}
+.anchor-effect:link::before,
+.anchor-effect:visited::before {
+  top: 0;
+  /* Transform origin is center by default */
+  transform-origin: left;
+}
+.anchor-effect:link::after,
+.anchor-effect:visited::after {
+  bottom: 0;
+  transform-origin: right;
+}
+.anchor-effect:hover::before,
+.anchor-effect:active::before,
+.anchor-effect:hover::after,
+.anchor-effect:active::after {
+  transform: scaleX(1);
+}

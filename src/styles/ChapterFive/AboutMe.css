@@ -1,0 +1,37 @@
+a.anchor-effect:visited,
+a.anchor-effect:link {
+  position: relative;
+  z-index: 1;
+}
+
+a.anchor-effect:visited::after,
+a.anchor-effect:link::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: #014d4e;
+  transform: scaleY(0);
+  transform-origin: bottom;
+  transition: transform 0.45s cubic-bezier(0.645, 0.045, 0.355, 1);
+  z-index: -1;
+}
+a.anchor-effect:hover::after,
+a.anchor-effect:active::after {
+  transform: scaleY(1);
+  transform-origin: top;
+}
+.about-me {
+  position: relative;
+}
+.about-me::after {
+  content: "";
+  position: absolute;
+  bottom: -5%;
+  left: 0;
+  height: 0.3rem;
+  width: 70%;
+  background-color: #014d4e;
+}

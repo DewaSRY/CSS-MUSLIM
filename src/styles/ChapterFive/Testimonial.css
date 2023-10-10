@@ -1,0 +1,30 @@
+.testimony-img {
+  position: relative;
+  transition: all 0.35s ease-in-out;
+}
+.testimony-text {
+  position: absolute;
+  top: 0;
+  left: 0;
+
+  width: 100%;
+  height: 100%;
+  background-color: #01727498;
+  padding: 1.5rem;
+
+  transform: scaleY(0);
+  /* opacity: 0; */
+  transform-origin: top;
+  transition: transform 0.35s ease-in-out;
+  z-index: 3;
+}
+.testimony-img:hover .testimony-text,
+.testimony-img:active .testimony-text {
+  transform: scaleY(1);
+  transform-origin: center;
+}
+.testimony-img:hover > img,
+.testimony-img:active > img {
+  transform: scale(0.98);
+  filter: grayscale(50%);
+}

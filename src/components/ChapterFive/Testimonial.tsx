@@ -1,9 +1,9 @@
 import { FC } from "react";
-import style from "@styles/ChapterFive/index.module.scss";
 import TestimonialOne from "@/assets/img/testimonials-1.jpg";
 import TestimonialTwo from "@/assets/img/testimonials-2.jpg";
 import TestimonialThree from "@/assets/img/testimonials-3.jpg";
 import TestimonialFour from "@/assets/img/testimonials-4.jpg";
+import "@styles/ChapterFive/Testimonial.css";
 const Testimonial: FC = () => {
   const Testimonials = [
     {
@@ -24,15 +24,25 @@ const Testimonial: FC = () => {
     },
   ];
   return (
-    <section id="testimonials" className={style.testimonials}>
+    <section
+      id="testimonials"
+      className="bg-five-secondary flex flex-wrap justify-evenly py-8 items-center text-white px-4"
+    >
       {Testimonials.map((testimonial) => (
-        <div key={Math.random() * 100}>
-          <div>
-            <img src={testimonial.image} alt="tony" />
-          </div>
-          <div className={style.cardContent}>
-            <h3>{testimonial.title}</h3>
-            <p>
+        <div
+          key={Math.random() * 100}
+          className="basis-[50rem]  grow overflow-hidden w-full h-full testimony-img rounded-[3rem] mb-12 shadow-2xl mx-4 "
+        >
+          {/* <div className="w-full"> */}
+          <img
+            src={testimonial.image}
+            alt="tony"
+            className="object-cover w-full h-full "
+          />
+          {/* </div> */}
+          <div className=" testimony-text">
+            <h3 className="text-3xl mb-8 md:text-6xl">{testimonial.title}</h3>
+            <p className="text-2xl md:text-5xl">
               Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam
               sunt quis cupiditate ducimus non esse?
             </p>

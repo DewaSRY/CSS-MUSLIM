@@ -1,5 +1,4 @@
 import { FC } from "react";
-import style from "@styles/ChapterFive/index.module.scss";
 
 import {
   BiLogoFacebook,
@@ -10,7 +9,7 @@ import {
   BiLogoDribbble,
 } from "react-icons/bi";
 import SideImage from "@/assets/img/logo-01.jpg";
-const SocialBar: FC = () => {
+const SideNav: FC = () => {
   const socialIcons = [
     BiLogoFacebook,
     BiLogoTwitter,
@@ -20,15 +19,15 @@ const SocialBar: FC = () => {
     BiLogoDribbble,
   ];
   return (
-    <aside className={style.sideNav}>
+    <aside className="sticky top-0 left-0 h-screen bg-five-primary flex flex-col justify-between items-center">
       <div>
-        <img src={SideImage} alt="logo" />
+        <img className="side-nav-item" src={SideImage} alt="logo" />
       </div>
-      <ul>
+      <ul className="mb-12">
         {socialIcons.map((Icon, idx) => (
-          <li key={idx}>
+          <li key={idx} className="mb-8 ">
             <a href="#">
-              <Icon />
+              <Icon className="text-white text-6xl hover:text-five-secondary transition-colors" />
             </a>
           </li>
         ))}
@@ -36,4 +35,4 @@ const SocialBar: FC = () => {
     </aside>
   );
 };
-export default SocialBar;
+export default SideNav;

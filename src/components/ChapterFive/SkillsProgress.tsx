@@ -1,15 +1,16 @@
 import { FC, Fragment } from "react";
-import style from "@styles/ChapterFive/index.module.scss";
-
+// import style from "@styles/ChapterFive/index.module.scss";
+import "@styles/ChapterFive/SkillProgress.css";
 const ProgressBar: FC<{
   percentage: number;
 }> = ({ percentage }) => {
   return (
-    <div className={style.ProgressBar}>
+    <div className="bg-five-primary block w-full rounded-[3rem]">
       <span
         style={{
           width: percentage + "%",
         }}
+        className="p-5 md:p-10  inline-block skill-progress"
       ></span>
     </div>
   );
@@ -18,7 +19,7 @@ const SkillsSection: FC = () => {
   const designSkills = [
     {
       title: "Web Design",
-      progress: <ProgressBar percentage={80} />,
+      progress: <ProgressBar percentage={100} />,
     },
     {
       title: "Print Design",
@@ -26,11 +27,11 @@ const SkillsSection: FC = () => {
     },
     {
       title: "Logo Design",
-      progress: <ProgressBar percentage={80} />,
+      progress: <ProgressBar percentage={70} />,
     },
     {
       title: "Graphic Design",
-      progress: <ProgressBar percentage={80} />,
+      progress: <ProgressBar percentage={85} />,
     },
   ];
   const coddingSkills = [
@@ -52,22 +53,29 @@ const SkillsSection: FC = () => {
     },
   ];
   return (
-    <section id="skills" className={style.SkillsSection}>
-      <div>
-        <h3>Design Skills</h3>
+    <section
+      id="skills"
+      className="bg-five-tertiary flex flex-wrap justify-evenly py-12 "
+    >
+      <div className="basis-[60rem] mx-12 my-8">
+        <h3 className="text-5xl mb-12 md:text-7xl">Design Skills</h3>
         {designSkills.map((skills, id) => (
           <Fragment key={id}>
-            <h4>{skills.title}</h4>
+            <h4 className=" text-2xl text-white md:text-4xl md:mt-12">
+              {skills.title}
+            </h4>
             {skills.progress}
           </Fragment>
         ))}
       </div>
 
-      <div>
-        <h3>Coding Skills</h3>
+      <div className="basis-[60rem]  mx-12 my-8">
+        <h3 className="text-5xl mb-12 md:text-7xl">Coding Skills</h3>
         {coddingSkills.map((skills, id) => (
           <Fragment key={id}>
-            <h4>{skills.title}</h4>
+            <h4 className=" text-2xl text-white md:text-4xl md:mt-12">
+              {skills.title}
+            </h4>
             {skills.progress}
           </Fragment>
         ))}

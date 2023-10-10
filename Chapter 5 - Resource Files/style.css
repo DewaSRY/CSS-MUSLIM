@@ -147,25 +147,20 @@ ul.header__main-nav--links li a:visited::after {
   width: 100%;
   height: 0.25rem;
   background-color: white;
-
   transform: scaleX(0);
-
   transition: transform 0.6s cubic-bezier(1, 0, 0, 1);
 }
-
 ul.header__main-nav--links li a:link::before,
 ul.header__main-nav--links li a:visited::before {
   top: 0;
   /* Transform origin is center by default */
   transform-origin: left;
 }
-
 ul.header__main-nav--links li a:link::after,
 ul.header__main-nav--links li a:visited::after {
   bottom: 0;
   transform-origin: right;
 }
-
 ul.header__main-nav--links li a:hover::before,
 ul.header__main-nav--links li a:active::before,
 ul.header__main-nav--links li a:hover::after,
@@ -190,11 +185,9 @@ div.showcase__content {
   background-color: var(--secondary-color-m);
   padding: calc(1rem + 2vw);
   height: calc(5rem + 20vmax);
-
   display: flex;
   flex-direction: column;
   justify-content: space-between;
-
   animation: hero 2s cubic-bezier(0.68, -0.55, 0.27, 1.55);
 }
 
@@ -224,7 +217,6 @@ div.showcase__content {
 .showcase__content--link:link,
 .showcase__content--link:visited {
   padding: 1rem 0;
-  transition: all 0.5s ease-in-out;
   width: 9rem;
   text-transform: uppercase;
   font-size: 1.5rem;
@@ -232,6 +224,7 @@ div.showcase__content {
   letter-spacing: 0.2rem;
   position: relative;
   z-index: 1;
+  transition: all 0.5s ease-in-out;
 }
 
 .showcase__content--link:link::after,
@@ -249,7 +242,6 @@ div.showcase__content {
 
   z-index: -1;
 }
-
 .showcase__content--link:hover::after,
 .showcase__content--link:active::after {
   transform: scaleX(1);

@@ -1,8 +1,7 @@
 import { FC } from "react";
-import style from "@styles/ChapterFive/index.module.scss";
-import SocialBar from "./SocialBar";
+import SideNav from "./SideNav";
 import Navigation from "./NavigationBar";
-import HeroShowcase from "./HeroShowCase";
+import HeroBanner from "./HeroBanner";
 import WorkSection from "./WorkSection";
 import AboutMe from "./AboutMe";
 import ServiceSection from "./ServiceSection";
@@ -11,11 +10,11 @@ import Testimonial from "./Testimonial";
 import ContactSection from "./ContactMeSection";
 const ChapterVive: FC = () => {
   return (
-    <div className={style.container}>
-      <SocialBar />
-      <main>
+    <div className="flex ">
+      <SideNav />
+      <main className="flex-1">
         <Navigation />
-        <HeroShowcase />
+        <HeroBanner />
         <WorkSection />
         <AboutMe />
         <ServiceSection />

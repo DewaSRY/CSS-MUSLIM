@@ -1,0 +1,33 @@
+.skill-progress {
+  position: relative;
+  width: 100%;
+}
+.skill-progress::after {
+  border-radius: 3rem;
+  content: "";
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 90%;
+  padding: 1rem;
+  background-color: #ff9408;
+  animation: progress 4s infinite cubic-bezier(1, 0, 0, 1);
+}
+@keyframes progress {
+  0% {
+    width: 0;
+  }
+  100% {
+    width: 100%;
+  }
+}
+@media screen and (min-width: 600px) {
+  .skill-progress::after {
+    padding: 1.5rem;
+  }
+}
+@media screen and (min-width: 1000px) {
+  .skill-progress::after {
+    padding: 2rem;
+  }
+}

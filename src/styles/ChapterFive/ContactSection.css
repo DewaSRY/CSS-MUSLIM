@@ -1,0 +1,25 @@
+.contact-background {
+  background: url(/src/assets/img/full-bg-03.jpg), #017374;
+  background-position: 10% 0;
+  background-repeat: no-repeat;
+}
+.form-input > input,
+.form-input > textarea {
+  color: white;
+  font-family: "Indie Flower", cursive;
+  font-size: 1.5rem;
+  letter-spacing: 0.2rem;
+  padding: 2rem;
+  background: transparent;
+  border: none;
+  border-bottom: #ff9408 solid 0.1rem;
+}
+.form-input > input[type="submit"] {
+  cursor: pointer;
+}
+@media screen and (min-width: 1024px) {
+  .contact-background {
+    background-position: 50%;
+    background: cover;
+  }
+}
